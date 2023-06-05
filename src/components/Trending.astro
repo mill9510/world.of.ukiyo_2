@@ -1,0 +1,188 @@
+---
+import "../styles/style.css";
+import Container from "../components/Container.astro";
+import Link from "../components/Link.astro";
+import Trendcontainer from "../components/Trendcontainer.astro";
+
+const url = "https://lxnrjzuoeukkotupkhoe.supabase.co/rest/v1/jewellery";
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx4bnJqenVvZXVra290dXBraG9lIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODM2MzczODgsImV4cCI6MTk5OTIxMzM4OH0.270N-mktsbds2KmeJGyyHwaSJdY6p6mI5CWmbO4ZLzo",
+  },
+};
+
+const response = await fetch(url, options);
+const alleProdukter = await response.json();
+
+const trending = alleProdukter.filter((produkt) => produkt.color == 3 || produkt.color == 4);
+---
+
+<div class="trending">
+  <h4>Trending now</h4>
+</div>
+
+<article>
+  <div id="carousel-container">
+    <div id="carousel-wrapper">
+      <Container kategori={trending} />
+    </div>
+  </div>
+</article>
+<div class="link_desktop">
+  <Link url="/produkter" text="Shop trending products" />
+</div>
+
+<section id="container_mobil">
+  <article>
+    <div>
+      <div id="carousel-wrapper">
+        <Trendcontainer kategori={trending} />
+      </div>
+    </div>
+  </article>
+  <Link url="/produkter" text="Shop trending products" />
+</section>
+
+<style>
+  h4 {
+    font-size: 1rem;
+  }
+  #carousel-container {
+    display: none;
+  }
+
+  .trending {
+    margin-top: 6rem;
+    display: grid;
+    border-top: solid black 1px;
+  }
+
+  #container_mobil {
+    width: 87%;
+    height: 362px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  #carousel-wrapper {
+    display: flex;
+    animation: carouselAnimation 4s linear infinite;
+    animation-direction: alternate;
+    animation-delay: 0.2s;
+    width: 50%;
+    height: 50%;
+  }
+
+  .slide {
+    flex: 0 0 calc(100% / 3); /* Vis maksimalt 3 billeder ad gangen */
+    width: 50%;
+    height: 50%;
+    border-left: solid 0.5px black;
+    border-bottom: solid 0.5px black;
+    border-top: solid 0.5px black;
+  }
+
+  article {
+    display: flex;
+    justify-content: center;
+  }
+
+  @keyframes carouselAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-25%);
+    }
+  }
+
+  .link_desktop {
+    display: none;
+  }
+  #carousel-container {
+    display: none;
+    border: solid black 1px;
+  }
+
+  #container_mobil {
+    overflow: hidden;
+    display: block;
+  }
+
+  #wrapper {
+    display: flex;
+  }
+
+  article {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .trending {
+    margin-top: 80px;
+    display: grid;
+    border-top: solid black 1px;
+  }
+
+  @media (min-width: 1199px) {
+    h4 {
+      font-size: 2rem;
+    }
+    .link_desktop {
+      display: block;
+    }
+    #container_mobil {
+      display: none;
+    }
+
+    .trending {
+      margin-top: 6rem;
+      display: grid;
+      border-top: solid black 1px;
+    }
+
+    #carousel-container {
+      width: 87%;
+      height: 362px;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+
+    #carousel-wrapper {
+      display: flex;
+      animation: carouselAnimation 20s linear infinite;
+      animation-direction: alternate;
+      animation-delay: 0.2s;
+      width: 50%;
+      height: 50%;
+    }
+
+    .slide {
+      flex: 0 0 calc(100% / 3); /* Vis maksimalt 3 billeder ad gangen */
+      width: 50%;
+      height: 50%;
+      border-left: solid 0.5px black;
+      border-bottom: solid 0.5px black;
+      border-top: solid 0.5px black;
+    }
+
+    article {
+      display: flex;
+      justify-content: center;
+    }
+
+    @keyframes carouselAnimation {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-200%);
+      }
+    }
+  }
+</style>

@@ -1,0 +1,136 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
+import Header from "../components/Header.astro";
+---
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Smykker kan ophøje ethvert outfit! Køb smukke og edgy smykker med god samvittighed fra vores sortiment af halskæder og øreringe udarbejdet på bæredygtig vis." />
+    <meta name="generator" content={Astro.generator} />
+    <title>Jewellery collections</title>
+  </head>
+  <body>
+    <Layout>
+      <main>
+        <div class="mobil">
+          <img class="collections1" src="/img/spikecollectionshoot5.webp" alt="Billede af models sideprofil med hoop ørering" />
+        </div>
+        <div class="slide-in from-left desktop">
+          <img src="/img/spikecollectionshoot7.webp" alt="Billede af models sideprofil med hoop ørering" />
+        </div>
+        <div class="slide-in from-left">
+          <Link url="/produkter" text="Shop the collection" alt="Pil med link til alle smykker" />
+        </div>
+
+        <div class="grid2">
+          <div class="slide-in from-left">
+            <img src="/img/spikecollectionshoot6.webp" alt="Billede af choker halskæde og øreringe på modeller" />
+          </div>
+          <div class="slide-in from-left">
+            <img src="/img/spikecollectionshoot8.webp" alt="Billede af smykker på model" />
+          </div>
+          <div class="slide-in from-left">
+            <img src="/img/spikecollectionshoot9.webp" alt="Billede af ørering på model med accessories" />
+          </div>
+          <div class="slide-in from-left">
+            <img src="/img/spikecollectionshoot10.webp" alt="Billede af øreing og choker halskæde på model" />
+          </div>
+          <div class="slide-in from-left">
+            <img src="/img/spikecollectionshoot11.webp" alt="Billede af ring og ørering på model" />
+          </div>
+          <div class="slide-in from-left">
+            <img src="/img/spikecollectionshoot12.webp" alt="Billede af choker halskæde på model" />
+          </div>
+        </div>
+      </main>
+    </Layout>
+  </body>
+
+  <script>
+    /**Linjen henter alle elementerne på siden, som har klassen "slide-in" og gemmer dem som const "sliders". **/
+    const sliders = document.querySelectorAll(".slide-in");
+    /**Bestemmer hvordan og hvor meget elementerne vises på skærmen */
+    const appearOptions = {
+      threshold: 0,
+      rootMargin: "0px 0px -100px 0px",
+    };
+
+    /**Udløser appear ved scroll** */
+    const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add("appear");
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    sliders.forEach((slider) => {
+      appearOnScroll.observe(slider);
+    });
+  </script>
+
+  <style>
+    /**Animationen, opacity, ease og tid**/
+    .from-left {
+      transition: opacity 1s ease-in-out, transform 1s ease;
+      opacity: 0;
+    }
+    .from-left {
+      transform: translateY(50%);
+    }
+
+    .from-left.appear {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .desktop {
+      display: none;
+    }
+
+    @media (min-width: 1200px) {
+      .desktop {
+        display: block;
+      }
+      .mobil {
+        display: none;
+      }
+
+      .grid2 {
+        margin: 10rem;
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</html>

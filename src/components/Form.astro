@@ -1,0 +1,98 @@
+---
+import "../styles/style.css";
+---
+
+<form>
+  <label for="name"></label>
+  <input class="input_1" type="text" name="name" placeholder="Full name" required />
+
+  <label for="email"></label>
+  <input class="input_3" type="text" name="email" placeholder="Email" required />
+
+  <button aria-labelledby="Knap som sender informationerne afsted">Submit</button>
+</form>
+<script>
+  const url = "https://lxnrjzuoeukkotupkhoe.supabase.co/rest/v1/newsletter";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx4bnJqenVvZXVra290dXBraG9lIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODM2MzczODgsImV4cCI6MTk5OTIxMzM4OH0.270N-mktsbds2KmeJGyyHwaSJdY6p6mI5CWmbO4ZLzo";
+
+  const form = document.querySelector("form");
+  form.addEventListener("submit", sendForm);
+
+  function sendForm(event) {
+    event.preventDefault();
+    const formData = form.elements;
+    let name = formData.name.value;
+    let email = formData.email.value;
+
+    //console.log(formData.name.value);
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        apikey: key,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email }),
+    });
+  }
+</script>
+
+<style>
+  /** Mobil styles */
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+  input {
+    background-color: var(--off_white);
+    border: solid 1px var(--black);
+    text-align: center;
+    width: 8rem;
+    height: 2rem;
+    font-family: "Cormorant", serif;
+    justify-self: center;
+  }
+
+  button {
+    font-family: "Cormorant", serif;
+    border: solid black 1px;
+    background-color: white;
+
+    width: 4rem;
+    height: 2rem;
+    justify-self: center;
+    display: inline-block;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  /** Tablet styles */
+  @media (min-width: 401px) {
+    input {
+      width: 18rem;
+      height: 2rem;
+    }
+    button {
+      width: 8rem;
+      height: 2rem;
+    }
+
+    button:hover {
+      background-color: #f5f5f5;
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: 1199px) {
+    input {
+      width: 25rem;
+      height: 2rem;
+    }
+    button {
+      width: 8rem;
+      height: 2rem;
+    }
+  }
+</style>
