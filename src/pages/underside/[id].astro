@@ -40,7 +40,7 @@ const { etprodukt } = Astro.props;
 
   <Layout title={etprodukt.id}>
     <p>
-      <a aria-label="Link reference of where you came from" class="bread_txt" href="/">Home</a> / <a class="bread_txt" href="/produkter">Shop</a>
+      <a aria-label="Link reference of where you came from" class="breadcrumb" href="/">Home</a> / <a class="breadcrumb" href="/produkter">Shop</a>
     </p>
     <section class="slide-in fade-in">
       <section class="single_view">
@@ -86,9 +86,7 @@ const { etprodukt } = Astro.props;
           </div>
 
           <div>
-            <button aria-labelledby="Knap som tilføjer produkt til kurven" class="button">
-              <h2>Add to basket</h2>
-            </button>
+            <button aria-labelledby="Knap som tilføjer produkt til kurven" class="button"> Add to basket</button>
           </div>
         </div>
       </section>
@@ -306,18 +304,6 @@ const { etprodukt } = Astro.props;
       content: "\2796"; /* Unicode character for "minus" sign (-) */
     }
 
-    .button {
-      border: solid black 0.5px;
-      background-color: white;
-      width: 8rem;
-      height: 3rem;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 2rem;
-      font-size: 10px;
-    }
-
     img {
       height: 100%;
     }
@@ -331,12 +317,6 @@ const { etprodukt } = Astro.props;
       height: 400px;
     }
     .content_txt {
-      font-family: "Cormorant", serif;
-      text-decoration: none;
-      color: black;
-    }
-
-    .bread_txt {
       font-family: "Cormorant", serif;
       text-decoration: none;
       color: black;
@@ -367,11 +347,6 @@ const { etprodukt } = Astro.props;
       .fold_ud_single {
         border-top: solid black 1px;
         border-bottom: solid black 1px;
-      }
-
-      .button {
-        border: solid black 1px;
-        width: 12rem;
       }
     }
     @media (min-width: 800px) {

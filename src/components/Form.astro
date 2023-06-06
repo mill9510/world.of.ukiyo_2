@@ -9,7 +9,7 @@ import "../styles/style.css";
   <label for="email"></label>
   <input class="input_3" type="text" name="email" placeholder="Email" required />
 
-  <button aria-labelledby="Knap som sender informationerne afsted">Submit</button>
+  <button aria-labelledby="Knap som sender informationerne afsted" class="button">Submit</button>
 </form>
 <script>
   const url = "https://lxnrjzuoeukkotupkhoe.supabase.co/rest/v1/newsletter";
@@ -56,16 +56,8 @@ import "../styles/style.css";
   }
 
   button {
-    font-family: "Cormorant", serif;
-    border: solid black 1px;
-    background-color: white;
-
-    width: 4rem;
-    height: 2rem;
     justify-self: center;
     display: inline-block;
-    text-align: center;
-    font-size: 10px;
   }
 
   /** Tablet styles */
@@ -74,24 +66,11 @@ import "../styles/style.css";
       width: 18rem;
       height: 2rem;
     }
-    button {
-      width: 8rem;
-      height: 2rem;
-    }
-
-    button:hover {
-      background-color: #f5f5f5;
-      cursor: pointer;
-    }
   }
 
   @media (min-width: 1199px) {
     input {
       width: 25rem;
-      height: 2rem;
-    }
-    button {
-      width: 8rem;
       height: 2rem;
     }
   }
