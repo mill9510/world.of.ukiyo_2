@@ -1,5 +1,5 @@
 ---
-import Animation from "../components/Animation.astro";
+import "../styles/style.css";
 ---
 
 <html lang="da">
@@ -13,7 +13,7 @@ import Animation from "../components/Animation.astro";
   <body>
     <section class="animation_grid">
       <div class="animation">
-        <Animation size="big" />
+        <h1>404</h1>
         <div class="goback">
           <h2>Oops... Looks like you are lost</h2>
           <button class="button_404"><a aria-label="Link to homepage" href="/">Go back</a></button>
@@ -27,11 +27,16 @@ import Animation from "../components/Animation.astro";
       display: grid;
       grid-template-columns: 1fr;
     }
+
     .animation {
       justify-self: center;
       margin-top: 3rem;
     }
     .goback {
+      text-align: center;
+    }
+
+    h1 {
       text-align: center;
     }
 
