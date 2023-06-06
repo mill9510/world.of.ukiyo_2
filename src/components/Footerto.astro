@@ -82,9 +82,7 @@ import Form from "../components/Form.astro";
     margin-right: 1rem;
     font-size: 0.5rem;
   }
-  /* button {
-    font-family: "Cormorant", serif;
-  } */
+
   /* Style the button that is used to open and close the collapsible content */
   .collapsible_footer {
     background-color: var(--off_white);
@@ -109,7 +107,6 @@ import Form from "../components/Form.astro";
   .content_footer a {
     display: flex;
     flex-direction: column;
-    /* font-size: 0.7rem; */
     margin-bottom: 0.8rem;
   }
 
@@ -126,10 +123,6 @@ import Form from "../components/Form.astro";
   }
 
   /** layout styles */
-  .footer_style {
-    background-color: var(--light_grey);
-    margin-top: 110px;
-  }
 
   .testimonials {
     margin-bottom: 1rem;
@@ -167,16 +160,9 @@ import Form from "../components/Form.astro";
 
   /** font styles */
   h2 {
-    /* font-size: 1.1rem; */
     text-transform: uppercase;
   }
-  /* p,
-  a {
-    font-size: 10px;
-    text-decoration: none;
-    color: var(--black);
-    font-family: "Baloo Thambi 2", cursive;
-  } */
+
   .test_txt {
     display: flex;
     justify-content: center;
@@ -185,25 +171,21 @@ import Form from "../components/Form.astro";
 
   .footer_style {
     padding-top: 3rem;
+    background-color: var(--light_grey);
+    margin-top: 4rem;
   }
 
   @media (min-width: 401px) {
     .collapsible_mobil_footer {
       display: none;
     }
-    /* a,
-    p {
-      font-size: 15px;
-    } */
+
     .bottom_txt {
       text-align: start;
       margin-bottom: 0;
       font-size: 1rem;
     }
 
-    /* a:hover {
-      color: rgb(135, 132, 132);
-    } */
     .flex_link_column {
       display: flex;
       flex-direction: column;
@@ -220,9 +202,6 @@ import Form from "../components/Form.astro";
     }
 
     /** layout styles */
-    .footer_style {
-      background-color: var(--light_grey);
-    }
 
     .somelogo {
       width: 8%;
@@ -254,17 +233,8 @@ import Form from "../components/Form.astro";
       gap: 15rem;
       margin-bottom: 4rem;
     }
-
-    /* h2 {
-      font-size: 1.2rem;
-    }
-    a {
-      font-size: 1rem;
-    } */
-
     .bottom a {
       margin-top: 0.4rem;
-      /* font-size: 0.8rem; */
     }
   }
 </style>

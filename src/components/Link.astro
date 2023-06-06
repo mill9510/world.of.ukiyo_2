@@ -11,16 +11,12 @@ const { img, text, url } = Astro.props;
 </article>
 
 <style>
-  /* a {
-    text-decoration: none;
-    color: black;
-    font-size: 0.8rem;
-    font-family: "Cormorant", serif;
-    cursor: pointer;
-  } */
-
   img {
     max-width: 15%;
+  }
+
+  .link {
+    margin-top: 0.5rem;
   }
 
   /* desktop */
@@ -31,8 +27,11 @@ const { img, text, url } = Astro.props;
     }
 
     a {
-      /* font-size: 1.3rem; */
       margin-left: 1rem;
+    }
+
+    .link {
+      margin-top: 1rem;
     }
   }
 </style>

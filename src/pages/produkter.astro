@@ -53,7 +53,7 @@ const view4 = alleProdukter.filter((produkt) => produkt.type == 1 && produkt.mob
         <a href="/produkter">Shop</a>
       </p>
     </article>
-    <section class="slide-in from-left">
+    <section class="slide-in from-left section">
       <div class="explore_overskrift">
         <h4>Explore</h4>
       </div>
@@ -80,7 +80,7 @@ const view4 = alleProdukter.filter((produkt) => produkt.type == 1 && produkt.mob
     </section>
     <!-- dekstopview -->
 
-    <section class="desktop_filter">
+    <section class="desktop_filter section">
       <section class="slide-in from-left">
         <div class="description">
           <div>
@@ -101,7 +101,7 @@ const view4 = alleProdukter.filter((produkt) => produkt.type == 1 && produkt.mob
         </div>
       </section>
 
-      <section class="slide-in from-left">
+      <section class="slide-in from-left section">
         <div class="description">
           <div>
             <h4>EARRINGS</h4>
@@ -121,7 +121,7 @@ const view4 = alleProdukter.filter((produkt) => produkt.type == 1 && produkt.mob
     </section>
 
     <!-- mobilview -->
-    <section class="mobil_filter">
+    <section class="mobil_filter section">
       <section class="slide-in from-left">
         <div class="description">
           <div>
@@ -140,7 +140,7 @@ const view4 = alleProdukter.filter((produkt) => produkt.type == 1 && produkt.mob
         <Link url="/necklaces" text="Shop all necklaces" />
       </section>
 
-      <section class="slide-in from-left">
+      <section class="slide-in from-left section">
         <div class="description">
           <div>
             <h4>EARRINGS</h4>
@@ -212,10 +212,6 @@ const view4 = alleProdukter.filter((produkt) => produkt.type == 1 && produkt.mob
       }
     }
 
-    /* .breadcrumb {
-      font-size: 1rem;
-      word-spacing: 0.5rem;
-    } */
     .desktop_filter {
       display: none;
     }
@@ -224,24 +220,13 @@ const view4 = alleProdukter.filter((produkt) => produkt.type == 1 && produkt.mob
       grid-template-columns: 1fr 1fr;
       margin-bottom: 40px;
     }
-    /* a {
-      font-family: "Cormorant", serif;
-      text-decoration: none;
-      color: black;
-    } */
+
     .description {
       display: grid;
       grid-template-columns: 1fr 1fr;
       border-top: solid black 0.5px;
       border-bottom: solid black 0.5px;
       align-items: center;
-    }
-
-    /* .text_view {
-      text-align: center;
-    } */
-    section {
-      margin-top: 80px;
     }
 
     /*Earrings og Necklaces store link*/
@@ -284,16 +269,6 @@ const view4 = alleProdukter.filter((produkt) => produkt.type == 1 && produkt.mob
       border-top: none;
     }
 
-    /* h2 {
-      font-size: 1rem;
-    }
-    h3 {
-      font-size: 0.8rem;
-    }
-    h4 {
-      font-size: 1rem;
-    } */
-
     .explore_overskrift {
       border-top: solid 0.5px black;
       border-bottom: solid 0.5px black;
@@ -312,16 +287,6 @@ const view4 = alleProdukter.filter((produkt) => produkt.type == 1 && produkt.mob
       .desktop_filter {
         display: block;
       }
-      /* h3 {
-        font-size: 0.8rem;
-      }
-      h4 {
-        font-size: 2rem;
-      } */
-
-      /* p {
-        font-size: 0.8rem;
-      } */
 
       .explore_overskrift {
         border-top: solid 1px black;
@@ -352,13 +317,6 @@ const view4 = alleProdukter.filter((produkt) => produkt.type == 1 && produkt.mob
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
       }
-
-      /* h3 {
-        font-size: 1rem;
-      }
-      h2 {
-        font-size: 2rem;
-      } */
     }
   </style>
 </html>

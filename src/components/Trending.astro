@@ -44,15 +44,12 @@ const trending = alleProdukter.filter((produkt) => produkt.color == 3 || produkt
 </section>
 
 <style>
-  /* h4 {
-    font-size: 1rem;
-  } */
   #carousel-container {
     display: none;
   }
 
   .trending {
-    margin-top: 6rem;
+    margin-top: 2rem;
     display: grid;
     border-top: solid black 1px;
   }
@@ -87,6 +84,7 @@ const trending = alleProdukter.filter((produkt) => produkt.color == 3 || produkt
   article {
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
   }
 
   @keyframes carouselAnimation {
@@ -115,22 +113,7 @@ const trending = alleProdukter.filter((produkt) => produkt.color == 3 || produkt
     display: flex;
   }
 
-  article {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-  }
-
-  .trending {
-    margin-top: 80px;
-    display: grid;
-    border-top: solid black 1px;
-  }
-
   @media (min-width: 1199px) {
-    /* h4 {
-      font-size: 2rem;
-    } */
     .link_desktop {
       display: block;
     }
@@ -169,11 +152,6 @@ const trending = alleProdukter.filter((produkt) => produkt.color == 3 || produkt
       border-left: solid 0.5px black;
       border-bottom: solid 0.5px black;
       border-top: solid 0.5px black;
-    }
-
-    article {
-      display: flex;
-      justify-content: center;
     }
 
     @keyframes carouselAnimation {

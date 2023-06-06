@@ -15,17 +15,13 @@ import Vision from "../components/Vision.astro";
 
   <Layout>
     <main>
-      <section>
+      <section class="section">
         <div class="overskrift_">
           <h1>WORLD OF UKIYO</h1>
         </div>
-
-        <!-- <div class="video_container">
-          <video autoplay muted playsinline loop src="/img/wouvideowebsite.webm"></video>
-        </div> -->
       </section>
 
-      <section>
+      <section class="section">
         <div class="overskrift_">
           <h4>Get to know our story</h4>
         </div>
@@ -50,22 +46,11 @@ import Vision from "../components/Vision.astro";
     </main>
   </Layout>
   <style>
-    /* .video_container video {
-      object-fit: cover;
-      width: 100%;
-    } */
-    /* video {
-      width: 100%; 
-      padding: 5px;
-    } */
     img {
       width: 100%;
     }
 
     .overskrift_ h1 {
-      /* border-top: solid 0.5px;
-      border-bottom: solid 0.5px; */
-
       text-align: center;
       font-size: 9rem;
     }
@@ -74,20 +59,36 @@ import Vision from "../components/Vision.astro";
       display: none;
     }
 
+    @media (min-width: 500px) {
+      .overskrift_ img {
+        display: block;
+      }
+
+      .underoverskrift {
+        justify-content: center;
+        border-bottom: solid 1px;
+      }
+      .grid_2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      img {
+        width: 100%;
+      }
+      .overskrift_ h4 {
+        font-size: 2rem;
+        border-top: solid 1px;
+        border-bottom: solid 1px;
+      }
+    }
+
     @media (min-width: 1199px) {
       .overskrift {
         border-top: solid 1px black;
         border-bottom: solid 1px black;
         margin-bottom: 40px;
       }
-      video {
-        width: 100%; /* Adjust the width as per your needs */
-        justify-content: center;
-      }
 
-      .video_container {
-        margin-bottom: 70px;
-      }
       .grid_2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -96,38 +97,6 @@ import Vision from "../components/Vision.astro";
       }
       img {
         width: 100%;
-      }
-
-      @media (min-width: 500px) {
-        .overskrift_ img {
-          display: block;
-        }
-        .video_container video {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 100px;
-        }
-        video {
-          width: 100%; /* Adjust the width as per your needs */
-          justify-content: center;
-        }
-        .underoverskrift {
-          justify-content: center;
-          border-bottom: solid 1px;
-        }
-        .grid_2 {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-        }
-        img {
-          width: 100%;
-        }
-        .overskrift_ h4 {
-          font-size: 2rem;
-          border-top: solid 1px;
-          border-bottom: solid 1px;
-        }
       }
     }
   </style>

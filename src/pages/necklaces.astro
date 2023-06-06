@@ -39,7 +39,7 @@ const necklacessilver = alleProdukter.filter((produkt) => produkt.color == 3 && 
           / <a aria-label="Link to all necklaces" href="/necklaces">Necklaces</a>
         </p>
       </article>
-      <section class="slide-in from-left">
+      <section class="slide-in from-left section">
         <div class="description">
           <div class="text_view_2">
             <h4>925 STERLING SILVER</h4>
@@ -55,7 +55,7 @@ const necklacessilver = alleProdukter.filter((produkt) => produkt.color == 3 && 
         </div>
       </section>
 
-      <section class="slide-in from-left">
+      <section class="slide-in from-left section">
         <div class="description">
           <div>
             <h4>18K GOLD</h4>
@@ -71,13 +71,13 @@ const necklacessilver = alleProdukter.filter((produkt) => produkt.color == 3 && 
         </div>
       </section>
 
-      <section class="slide-in from-left">
+      <section class="slide-in from-left section">
         <div class="grid_liste_necklace">
           <img class="liste_necklace" src="/img/liste_necklace.webp" alt="Billede af modeller med choker halskæde med sølv hjerte vedhæng, sølv hoop ørering og sølv ørering med hjerte vedhæng" />
         </div>
       </section>
 
-      <section class="slide-in from-left">
+      <section class="slide-in from-left section">
         <Trending alt="Populære smykker" />
       </section>
     </main>
@@ -138,37 +138,17 @@ const necklacessilver = alleProdukter.filter((produkt) => produkt.color == 3 && 
 
     /**styling **/
 
-    /* .breadcrumb {
-      font-size: 1rem;
-      word-spacing: 0.5rem;
-    } */
     .grid_produkter {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
-    /* a {
-      font-family: "Cormorant", serif;
-      text-decoration: none;
-      color: black;
-    } */
+
     .description {
       display: grid;
       grid-template-columns: 1fr 1fr;
       border-top: solid black 0.5px;
       border-bottom: solid black 0.5px;
       align-items: center;
-    }
-
-    /* .text_view {
-      font-size: 0.5rem;
-    } */
-
-    /* h4 {
-      font-size: 1rem;
-    } */
-
-    section {
-      margin-top: 80px;
     }
 
     .liste_necklace {
@@ -181,17 +161,7 @@ const necklacessilver = alleProdukter.filter((produkt) => produkt.color == 3 && 
         display: grid;
         grid-template-columns: 1fr 1fr;
       }
-      /* h2,
-      p {
-        font-size: 0.8rem;
-      }
 
-      h3 {
-        font-size: 0.8rem;
-      }
-      h4 {
-        font-size: 1.5rem;
-      } */
       .grid_liste_necklace {
         display: grid;
         background-color: #eaebe6;
@@ -213,13 +183,6 @@ const necklacessilver = alleProdukter.filter((produkt) => produkt.color == 3 && 
         display: grid;
         grid-template-columns: 1fr 1fr;
       }
-
-      /* h3 {
-        font-size: 1rem;
-      }
-      h4 {
-        font-size: 2rem;
-      } */
     }
   </style>
 </html>
