@@ -27,7 +27,7 @@ import "../styles/style.css";
             <h3>Shipping</h3>
             <p>Free</p>
             <h4>Total</h4>
-            <p class="bigger">0,00 DKK</p>
+            <h4>0,00 DKK</h4>
           </section>
         </div>
       </div>
@@ -72,8 +72,6 @@ import "../styles/style.css";
   close.addEventListener("click", toggleMenu);
 </script>
 <style>
-  .basket-content button {
-  }
   .kurv {
     z-index: 1;
   }
@@ -125,19 +123,6 @@ import "../styles/style.css";
     left: 0;
   }
 
-  .checkout {
-    width: 10rem;
-    height: 2rem;
-    margin-left: 0.5rem;
-    font-family: "Cormorant", serif;
-    padding-left: 30px;
-    padding-right: 30px;
-    background-color: white;
-    border: solid black 1px;
-    text-align: center;
-    justify-content: start;
-  }
-
   .checkout_mobil {
     text-align: start;
   }
@@ -167,19 +152,17 @@ import "../styles/style.css";
   h2 {
     border-bottom: solid 1px;
   }
+  h4 {
+    font-size: 0.7rem;
+  }
 
   .basket-content h3,
   .basket-content h4 {
     margin-right: 2rem;
   }
 
-  .bigger {
-    font-family: "Anton", sans-serif;
-  }
-
-  .bigger,
-  .basket-content h4 {
-    font-size: 1rem;
+  .checkout_mobil .button {
+    margin-left: 1rem;
   }
 
   .basket,
@@ -215,7 +198,7 @@ import "../styles/style.css";
   }
 
   .basket-content.shown {
-    left: 42%;
+    left: 20%;
   }
 
   .basket-content.shown {
@@ -251,10 +234,8 @@ import "../styles/style.css";
     .basket-content p {
       margin-left: 1rem;
     }
-
-    .bigger,
-    .basket-content h4 {
-      font-size: 1.1rem;
+    h4 {
+      font-size: 1rem;
     }
   }
 
@@ -285,17 +266,18 @@ import "../styles/style.css";
       left: 60%;
     }
 
-    .bigger,
-    .basket-content h4 {
-      font-size: 1.4rem;
-    }
-
     .basket-content h2,
     .basket-content h3,
     .basket-content h4,
     .basket-content p {
       display: block;
       text-align: left;
+      margin-left: 3rem;
+    }
+    h4 {
+      font-size: 1.2rem;
+    }
+    .checkout_mobil .button {
       margin-left: 3rem;
     }
   }

@@ -11,7 +11,7 @@ import Kurv from "../components/Kurv.astro";
           <a aria-label="Link to homepage" href="/"><img src="/img/logo.webp" alt="World of Ukiyo logo" class="logo" /></a>
         </div>
 
-        <button class="toggle-btn button">
+        <button class="toggle-btn">
           <span class="hamburger"></span>
         </button>
       </section>
@@ -26,13 +26,13 @@ import Kurv from "../components/Kurv.astro";
           <div class="dropdown">
             <div class="grid_drop">
               <div class="jew_grid">
-                <a class="filter" href="#">Jewellery</a>
+                <h3 class="filter">Jewellery</h3>
                 <li><a aria-label="Link to shop earrings" class="drop_link" href="/earrings">Earrings</a></li>
                 <li><a aria-label="Link to shop necklaces" class="drop_link" href="/necklaces">Necklaces</a></li>
               </div>
 
               <div class="jew_grid">
-                <a class="filter" href="#">Materials</a>
+                <h3 class="filter">Materials</h3>
                 <li><a aria-label="Link to shop silver jewellery" class="drop_link" href="/silver">Silver</a></li>
                 <li><a aria-label="Link to shop gold jewellery" class="drop_link" href="/gold">Gold</a></li>
               </div>
@@ -146,6 +146,10 @@ import Kurv from "../components/Kurv.astro";
       text-align: end;
     }
 
+    .collapsible_mobil button {
+      margin: 0;
+    }
+
     /* Style the button that is used to open and close the collapsible content */
     .collapsible {
       background-color: var(--off_white);
@@ -165,6 +169,7 @@ import Kurv from "../components/Kurv.astro";
       display: none;
       overflow: hidden;
       background-color: var(--off_white);
+      padding: 15px;
     }
 
     .collapsible:after {
@@ -267,6 +272,10 @@ import Kurv from "../components/Kurv.astro";
     .menu_img {
       display: none;
     }
+
+    .nav-links_2 {
+      background-color: var(--light_grey);
+    }
     .collapsible_mobil.shown {
       display: flex;
     }
@@ -304,10 +313,6 @@ import Kurv from "../components/Kurv.astro";
         display: inline-block;
       }
 
-      .filter {
-        font-size: 1.2rem;
-      }
-
       .menu_img {
         display: block;
       }
@@ -335,13 +340,6 @@ import Kurv from "../components/Kurv.astro";
 
       .droplink {
         display: inline-block;
-        cursor: pointer;
-        color: white;
-        gap: 0.7rem;
-      }
-
-      li {
-        margin-top: 0.7rem;
       }
 
       .droplink:hover .dropdown {
@@ -386,6 +384,11 @@ import Kurv from "../components/Kurv.astro";
       a {
         padding: 25px;
         text-transform: uppercase;
+      }
+      h3 {
+        padding: 25px;
+        text-transform: uppercase;
+        margin-left: 1rem;
       }
     }
 
