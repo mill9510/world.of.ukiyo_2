@@ -14,16 +14,20 @@ import Form from "../components/Form.astro";
     <div class="flex_links">
       <section class="flex_link_column">
         <h2>Shop</h2>
-        <li><a aria-label="Link to collections" href="/collections">Collections</a></li>
-        <li><a aria-label="Link to shop all products" href="/produkter">Shop</a></li>
+        <ul>
+          <li><a aria-label="Link to collections" href="/collections">Collections</a></li>
+          <li><a aria-label="Link to shop all products" href="/produkter">Shop</a></li>
+        </ul>
       </section>
 
       <section class="flex_link_column">
         <h2>Links</h2>
-        <li><a aria-label="Link to about us page" href="/about">About us</a></li>
-        <li><a aria-label="Link to frequently asked questions" href="#">FAQ</a></li>
-        <li><a aria-label="Information on delivery" href="#">Delivery</a></li>
-        <li><a aria-label="Information on returns" href="#">Returns</a></li>
+        <ul>
+          <li><a aria-label="Link to about us page" href="/about">About us</a></li>
+          <li><a aria-label="Link to frequently asked questions" href="#">FAQ</a></li>
+          <li><a aria-label="Information on delivery" href="#">Delivery</a></li>
+          <li><a aria-label="Information on returns" href="#">Returns</a></li>
+        </ul>
       </section>
     </div>
 
@@ -31,17 +35,21 @@ import Form from "../components/Form.astro";
       <section>
         <button aria-labelledby="Knap til at åbne og lukke collapsible" type="button" class="collapsible_footer">Shop</button>
         <div class="content_footer">
-          <li><a aria-label="Link to collections" href="/collections">Collections</a></li>
-          <li><a aria-label="Link to all products" href="/produkter">Shop all</a></li>
+          <ul>
+            <li><a aria-label="Link to collections" href="/collections">Collections</a></li>
+            <li><a aria-label="Link to all products" href="/produkter">Shop all</a></li>
+          </ul>
         </div>
       </section>
       <section>
         <button aria-labelledby="Knap til at åbne og lukke collapsible" type="button" class="collapsible_footer">Links</button>
         <div class="content_footer">
-          <li><a aria-label="About us page" href="/about">About us</a></li>
-          <li><a aria-label="Frequently asked questions" href="#">FAQ</a></li>
-          <li><a aria-label="Information on delivery" href="#">Delivery</a></li>
-          <li><a aria-label="Information on returns" href="#">Returns</a></li>
+          <ul>
+            <li><a aria-label="About us page" href="/about">About us</a></li>
+            <li><a aria-label="Frequently asked questions" href="#">FAQ</a></li>
+            <li><a aria-label="Information on delivery" href="#">Delivery</a></li>
+            <li><a aria-label="Information on returns" href="#">Returns</a></li>
+          </ul>
         </div>
       </section>
     </div>
