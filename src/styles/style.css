@@ -10,13 +10,13 @@ h1 {
 }
 
 h2 {
-  /* font-family: "Cormorant", serif; */
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Cormorant", serif;
+
   font-size: 0.7rem;
 }
 h3 {
-  /* font-family: "Cormorant", serif; */
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Cormorant", serif;
+
   font-size: 0.8rem;
 }
 h4 {
@@ -26,14 +26,14 @@ h4 {
   letter-spacing: 0.1rem;
 }
 p {
-  /* font-family: "Baloo Thambi 2", cursive; */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Baloo Thambi 2", cursive;
+
   font-size: 0.7rem;
 }
 
 a {
-  /* font-family: "Cormorant", serif; */
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Cormorant", serif;
+
   text-decoration: none;
   color: black;
   cursor: pointer;
@@ -59,8 +59,8 @@ li {
 }
 
 li a {
-  /* font-family: "Baloo Thambi 2", cursive; */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Baloo Thambi 2", cursive;
+
   font-size: 0.7rem;
 }
 
@@ -68,8 +68,7 @@ li a {
   display: flex;
   flex-direction: column;
   font-size: 0.7rem;
-  /* font-family: "Baloo Thambi 2", cursive; */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Baloo Thambi 2", cursive;
 }
 
 @media (min-width: 750px) {
@@ -94,7 +93,7 @@ li a {
   }
 
   a {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   p {
