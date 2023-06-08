@@ -11,13 +11,19 @@ const { produkt, link } = Astro.props;
       <div class="overlay_grid">
         <h2 class="overlay-text">{produkt.productname}</h2>
         <p class="overlay-text">{produkt.fullprice}</p>
+        <button class="button_basket"> <img width="20" height="20" src="/img/basket.svg" alt="tilføj til kurven" /></button>
       </div>
     </div>
 
     <img alt="Original billede" class="image" src={"/img/" + produkt.img} />
   </div>
 </a>
+
 <style>
+  .button_basket {
+    border: none;
+    background-color: white;
+  }
   .hover-image {
     display: none;
   }
