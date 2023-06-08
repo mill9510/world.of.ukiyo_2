@@ -2,12 +2,10 @@
   box-sizing: border-box;
 }
 
-img,
-.hover-image,
-.basket,
-.somelogo {
+img {
   width: 100%;
   height: auto;
+  aspect-ratio: 16/9;
 }
 
 /**Tekst**/
