@@ -4,8 +4,7 @@
 
 /**Tekst**/
 h1 {
-  font-family: "Anton", sans-serif;
-  font-weight: 30000;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-align: center;
   font-size: 2rem;
 }
@@ -21,7 +20,7 @@ h3 {
   font-size: 0.8rem;
 }
 h4 {
-  font-family: "Anton", sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1rem;
   font-weight: lighter;
   letter-spacing: 0.1rem;
