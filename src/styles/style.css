@@ -4,8 +4,7 @@
 
 /**Tekst**/
 h1 {
-  /* font-family: "Anton", sans-serif; */
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Anton", sans-serif;
   font-weight: 30000;
   text-align: center;
   font-size: 2rem;
