@@ -10,13 +10,11 @@ h1 {
 }
 
 h2 {
-  font-family: "Cormorant", serif;
-
-  font-size: 0.7rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.6rem;
 }
 h3 {
-  font-family: "Cormorant", serif;
-
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 0.8rem;
 }
 h4 {
@@ -27,17 +25,15 @@ h4 {
 }
 p {
   font-family: "Baloo Thambi 2", cursive;
-
   font-size: 0.7rem;
 }
 
 a {
-  font-family: "Cormorant", serif;
-
+  font-family: Georgia, "Times New Roman", Times, serif;
   text-decoration: none;
   color: black;
   cursor: pointer;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
 }
 
 a:hover {
@@ -91,7 +87,7 @@ li a {
   }
 
   li a {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   h4 {
@@ -99,7 +95,7 @@ li a {
   }
 
   a {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   p {
